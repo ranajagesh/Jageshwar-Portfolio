@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+.gradient-text {
+    background: linear-gradient(90deg, #7E22CE 0%, #F0ABFC 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    position: relative;
+    color: #F0ABFC;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #7E22CE 0%, #F0ABFC 100%);
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Custom colors */
+.bg-dark {
+    background-color: #1E1B4B;
+}
+
+.bg-primary {
+    background-color: #7E22CE;
+}
+
+.bg-secondary {
+    background-color: #F0ABFC;
+}
+
+.text-primary {
+    color: #7E22CE;
+}
+
+.text-secondary {
+    color: #F0ABFC;
+}
+
+.border-primary {
+    border-color: #7E22CE;
+}
+
+.border-secondary {
+    border-color: #F0ABFC;
+}
+
+/* Fonts */
+.font-heading {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-sans {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
