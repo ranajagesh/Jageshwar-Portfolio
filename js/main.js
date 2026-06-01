@@ -1,97 +1,113 @@
-// Initialize AOS animation
+/* =============================================
+   JAGESHWAR RANA PORTFOLIO — main.js
+   ============================================= */
+
+/* ---------- AOS Init ---------- */
 AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true
+    duration: 700,
+    easing: 'ease-out-cubic',
+    once: true,
+    offset: 60
 });
 
-// Mobile menu toggle
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
+/* ---------- Mobile Menu ---------- */
+const mobileMenuBtn  = document.getElementById('mobile-menu-button');
+const mobileMenu     = document.getElementById('mobile-menu');
 
-mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
 });
 
-// Close mobile menu when clicking a link
+// Close when a link is clicked
 document.querySelectorAll('#mobile-menu .nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-    });
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
 });
 
-// Back to top button
-const backToTopButton = document.getElementById('back-to-top');
-
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        backToTopButton.classList.remove('opacity-0', 'invisible');
-        backToTopButton.classList.add('opacity-100', 'visible');
-    } else {
-        backToTopButton.classList.remove('opacity-100', 'visible');
-        backToTopButton.classList.add('opacity-0', 'invisible');
-    }
-});
-
-// Smooth scrolling for anchor links
+/* ---------- Smooth Scroll ---------- */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
+        if (target) {
+            e.preventDefault();
+            window.scrollTo({ top: target.offsetTop - 72, behavior: 'smooth' });
         }
     });
 });
 
-// Active nav link highlighting
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-link');
+/* ---------- Active Nav on Scroll ---------- */
+const sections = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-link');
 
-window.addEventListener('scroll', () => {
+function setActiveNav() {
     let current = '';
-    
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.pageYOffset >= sectionTop - 100) {
+        if (window.scrollY >= section.offsetTop - 120) {
             current = section.getAttribute('id');
         }
     });
-    
     navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
     });
+}
+
+window.addEventListener('scroll', setActiveNav, { passive: true });
+
+/* ---------- Back to Top Button ---------- */
+const backToTop = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 400);
+}, { passive: true });
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Form submission
-const contactForm = document.getElementById('contact-form');
+/* ---------- Contact Form — Fetch + FormSubmit ----------
+   FormSubmit.co works with both <form> POST and fetch().
+   Using fetch gives us full control: show success/error
+   messages without redirecting away from the portfolio.
+   -------------------------------------------------------- */
+const form       = document.getElementById('contact-form');
+const submitBtn  = document.getElementById('form-submit-btn');
+const successMsg = document.getElementById('form-success');
+const errorMsg   = document.getElementById('form-error');
 
-// if (contactForm) {
-//     contactForm.addEventListener('submit', function(e) {
-//         e.preventDefault();
-        
-//         // Get form values
-//         const name = document.getElementById('name').value;
-//         const email = document.getElementById('email').value;
-//         const subject = document.getElementById('subject').value;
-//         const message = document.getElementById('message').value;
-        
-//         // Here you would typically send the form data to a server
-//         // For now, we'll just log it and show an alert
-//         console.log({ name, email, subject, message });
-        
-//         alert('Thank you for your message! I will get back to you soon.');
-//         contactForm.reset();
-//     });
-// }
+if (form) {
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();   // stop normal POST redirect
+
+        // Button loading state
+        submitBtn.disabled    = true;
+        submitBtn.innerHTML   = '<i class="fas fa-spinner fa-spin text-sm"></i> Sending…';
+
+        // Hide any previous messages
+        successMsg.classList.remove('show');
+        errorMsg.classList.remove('show');
+
+        // Build form data
+        const data = new FormData(form);
+
+        try {
+            const response = await fetch('https://formsubmit.co/ajax/jageshwarrana25@gmail.com', {
+                method:  'POST',
+                headers: { 'Accept': 'application/json' },
+                body:    data
+            });
+
+            if (response.ok) {
+                successMsg.classList.add('show');
+                form.reset();
+            } else {
+                errorMsg.classList.add('show');
+            }
+        } catch (err) {
+            // Network error
+            errorMsg.classList.add('show');
+        } finally {
+            submitBtn.disabled  = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane text-sm"></i> Send Message';
+        }
+    });
+}

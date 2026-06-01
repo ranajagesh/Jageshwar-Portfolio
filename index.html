@@ -1,643 +1,635 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jageshwar Rana | Full Stack Developer</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/06088bb5d1.js" crossorigin="anonymous"></script>
-    
+    <title>Jageshwar Rana | Java & Full Stack Developer</title>
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
+    <!-- Font Awesome Free CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
     <!-- Custom CSS -->
     <link href="./css/style.css" rel="stylesheet">
 </head>
 
-<body class="bg-dark text-gray-100 font-sans min-h-screen">
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <a href="#" class="text-2xl font-heading font-bold gradient-text">Jageshwar Rana</a>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-link px-3 py-2 text-sm font-medium hover:text-secondary transition">Home</a>
-                        <a href="#about" class="nav-link px-3 py-2 text-sm font-medium hover:text-secondary transition">About</a>
-                        <a href="#education" class="nav-link px-3 py-2 text-sm font-medium hover:text-secondary transition">Education</a>
-                        <a href="#skills" class="nav-link px-3 py-2 text-sm font-medium hover:text-secondary transition">Skills</a>
-                        <a href="#projects" class="nav-link px-3 py-2 text-sm font-medium hover:text-secondary transition">Projects</a>
-                        <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium hover:text-secondary transition">Contact</a>
-                    </div>
-                </div>
-                <div class="-mr-2 flex md:hidden">
-                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Mobile menu -->
-        <div class="hidden md:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
-                <a href="#home" class="nav-link px-3 py-2 text-base font-medium hover:text-secondary transition">Home</a>
-                <a href="#about" class="nav-link px-3 py-2 text-base font-medium hover:text-secondary transition">About</a>
-                <a href="#education" class="nav-link px-3 py-2 text-base font-medium hover:text-secondary transition">Education</a>
-                <a href="#skills" class="nav-link px-3 py-2 text-base font-medium hover:text-secondary transition">Skills</a>
-                <a href="#projects" class="nav-link px-3 py-2 text-base font-medium hover:text-secondary transition">Projects</a>
-                <a href="#contact" class="nav-link px-3 py-2 text-base font-medium hover:text-secondary transition">Contact</a>
-            </div>
-        </div>
-    </nav>
+<body>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<!-- ========== NAVIGATION ========== -->
+<nav>
+    <div class="nav-inner">
+        <a href="#" class="nav-logo gradient-text">JR.</a>
+
+        <div class="nav-links">
+            <a href="#home"       class="nav-link">Home</a>
+            <a href="#about"      class="nav-link">About</a>
+            <a href="#education"  class="nav-link">Education</a>
+            <a href="#skills"     class="nav-link">Skills</a>
+            <a href="#projects"   class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#contact"    class="nav-link">Contact</a>
+        </div>
+
+        <button id="mobile-menu-button" class="nav-mobile-btn" aria-label="Toggle menu">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-inner">
+            <a href="#home"       class="nav-link">Home</a>
+            <a href="#about"      class="nav-link">About</a>
+            <a href="#education"  class="nav-link">Education</a>
+            <a href="#skills"     class="nav-link">Skills</a>
+            <a href="#projects"   class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#contact"    class="nav-link">Contact</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ========== HERO ========== -->
+<section id="home" class="hero-section">
+    <!-- Glow blobs -->
+    <div class="hero-glow" style="top:-100px;left:-100px;background:radial-gradient(circle,rgba(124,58,237,0.15) 0%,transparent 70%)"></div>
+    <div class="hero-glow" style="bottom:-100px;right:-100px;background:radial-gradient(circle,rgba(6,182,212,0.1) 0%,transparent 70%)"></div>
+
+    <div style="position:relative;z-index:1;max-width:80rem;margin:0 auto;padding:0 1.5rem;width:100%">
+        <div style="display:grid;grid-template-columns:1fr;gap:3rem;align-items:center" class="hero-grid">
+
+            <!-- Text -->
             <div data-aos="fade-right">
-                <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4">
-                    <span class="block">Hey, I'm</span>
+                <div class="avail-badge">
+                    <div class="avail-dot"></div>
+                    Available for opportunities
+                </div>
+
+                <h1 style="font-size:clamp(2.2rem,6vw,4rem);font-weight:800;line-height:1.1;margin-bottom:1rem">
+                    <span style="display:block;font-size:0.55em;font-weight:400;color:#94A3B8;margin-bottom:0.3em">Hi, I'm</span>
                     <span class="gradient-text">Jageshwar Rana</span>
                 </h1>
-                <h2 class="text-xl md:text-2xl text-secondary mb-6">Full Stack Developer | Java Developer</h2>
-                <p class="text-gray-300 mb-8 max-w-lg">
-                    MCA graduate passionate about building efficient, scalable applications with clean code and modern technologies.
+
+                <h2 style="font-size:1rem;color:#94A3B8;margin-bottom:1.25rem;font-weight:500">
+                    Java &amp; Spring Boot Developer &nbsp;·&nbsp; MCA Graduate
+                </h2>
+
+                <p style="color:#94A3B8;max-width:28rem;line-height:1.7;margin-bottom:2rem;font-size:0.95rem">
+                    Building robust, scalable backend systems and full-stack web applications.
+                    Skilled in Java, Spring Boot, MySQL, and modern web technologies.
+                    Open to backend / full-stack roles.
                 </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://drive.google.com/file/d/1vhK6Z9XaiOduxia6tvh_dlkZbUCSQ60p/view?usp=sharing" target="_blank" class="bg-primary hover:bg-purple-800 text-white font-medium py-3 px-6 rounded-lg transition shadow-lg hover:shadow-purple-500/20">
+
+                <div style="display:flex;flex-wrap:wrap;gap:1rem">
+                    <!-- Direct download: Google Drive export link -->
+                    <a href="https://drive.google.com/uc?export=download&id=1RibYHD1zszWWL67F48FnUCShOft61IF2"
+                       class="btn-primary" download>
+                        <i class="fas fa-download" style="font-size:0.8rem"></i>
                         Download CV
                     </a>
-                    <a href="#contact" class="border border-primary text-primary hover:bg-primary/10 font-medium py-3 px-6 rounded-lg transition">
+                    <a href="#contact" class="btn-outline">
+                        <i class="fas fa-paper-plane" style="font-size:0.8rem"></i>
                         Contact Me
                     </a>
                 </div>
             </div>
-            <div data-aos="fade-left" class="flex justify-center">
-                <div class="relative w-full max-w-md">
-                    <div class="absolute -inset-4 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-75 animate-pulse"></div>
-                    <img src="./img/image.png" alt="Jageshwar Rana" class="relative w-full h-auto rounded-full border-4 border-white/10 animate-float">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
-                <span class="gradient-text">About Me</span>
-            </h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right" class="flex justify-center">
-                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20">
-                    <img src="./img/jaggu.jpg" alt="Jageshwar Rana" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-primary/10"></div>
-                </div>
-            </div>
-            <div data-aos="fade-left">
-                <h3 class="text-2xl font-heading font-bold mb-6">Let Me Introduce Myself</h3>
-                <p class="text-gray-300 mb-6">
-                    MCA graduate from Marwari College, Ranchi, with a strong interest in software development.
-                    I specialize in Java, Spring Boot, SQL, and core Java concepts, and I'm passionate about writing clean,
-                    efficient code. I believe in continuous learning and strive to grow both personally and professionally
-                    in the tech field.
-                </p>
-                <ul class="space-y-3">
-                    <li class="flex items-start">
-                        <i class="fas fa-chevron-right text-secondary mr-2 mt-1"></i>
-                        <span class="font-medium text-white">Name:</span>
-                        <span class="ml-1 text-gray-300">Jageshwar Rana</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-chevron-right text-secondary mr-2 mt-1"></i>
-                        <span class="font-medium text-white">Age:</span>
-                        <span class="ml-1 text-gray-300">25</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-chevron-right text-secondary mr-2 mt-1"></i>
-                        <span class="font-medium text-white">Location:</span>
-                        <span class="ml-1 text-gray-300">Giridih, Jharkhand</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-chevron-right text-secondary mr-2 mt-1"></i>
-                        <span class="font-medium text-white">Birthdate:</span>
-                        <span class="ml-1 text-gray-300">25 Jan 2000</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-chevron-right text-secondary mr-2 mt-1"></i>
-                        <span class="font-medium text-white">Email:</span>
-                        <span class="ml-1 text-gray-300">jageshwarrana25@gmail.com</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-dark/50">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
-                <span class="gradient-text">My Education</span>
-            </h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div data-aos="flip-up" data-aos-delay="100">
-                <div class="glass-card h-full p-6 rounded-xl hover:border-primary/50 border border-gray-800 transition">
-                    <div class="text-secondary text-lg mb-2">2021-2023</div>
-                    <h3 class="text-xl font-bold mb-2">Master of Computer Application</h3>
-                    <p class="text-gray-400 mb-3">Ranchi University</p>
-                    <div class="text-primary font-bold">8.56 CGPA</div>
-                </div>
-            </div>
-            
-            <div data-aos="flip-up" data-aos-delay="200">
-                <div class="glass-card h-full p-6 rounded-xl hover:border-primary/50 border border-gray-800 transition">
-                    <div class="text-secondary text-lg mb-2">2018-2021</div>
-                    <h3 class="text-xl font-bold mb-2">Bachelor of Science in Computer Application</h3>
-                    <p class="text-gray-400 mb-3">Ranchi University</p>
-                    <div class="text-primary font-bold">8.54 CGPA</div>
-                </div>
-            </div>
-            
-            <div data-aos="flip-up" data-aos-delay="300">
-                <div class="glass-card h-full p-6 rounded-xl hover:border-primary/50 border border-gray-800 transition">
-                    <div class="text-secondary text-lg mb-2">2015-2017</div>
-                    <h3 class="text-xl font-bold mb-2">Higher Secondary Education</h3>
-                    <p class="text-gray-400 mb-3">Annada College Hazaribagh</p>
-                    <div class="text-primary font-bold">62.20%</div>
-                </div>
-            </div>
-            
-            <div data-aos="flip-up" data-aos-delay="400">
-                <div class="glass-card h-full p-6 rounded-xl hover:border-primary/50 border border-gray-800 transition">
-                    <div class="text-secondary text-lg mb-2">2013-2015</div>
-                    <h3 class="text-xl font-bold mb-2">Secondary Education</h3>
-                    <p class="text-gray-400 mb-3">S R S S R High School Suriya</p>
-                    <div class="text-primary font-bold">60.40%</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
-                <span class="gradient-text">My Skills</span>
-            </h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Languages -->
-            <div data-aos="fade-right">
-                <h3 class="text-xl font-bold mb-4 flex items-center text-secondary">
-                    <i class="fas fa-code mr-2"></i> Programming Languages
-                </h3>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Java</span>
-                            <span class="text-gray-400">60%</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 60%"></div>
-                        </div>
+            <!-- Photo -->
+            <div data-aos="fade-left" style="display:flex;justify-content:center">
+                <div class="profile-ring-wrap">
+                    <div class="profile-ring-glow animate-float"></div>
+                    <div class="profile-ring-img animate-float">
+                        <img src="./img/image.png" alt="Jageshwar Rana">
                     </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Advanced Java</span>
-                            <span class="text-gray-400">60%</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 60%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">C</span>
-                            <span class="text-gray-400">70%</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">C++</span>
-                            <span class="text-gray-400">30%</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 30%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Databases -->
-            <div data-aos="fade-left">
-                <h3 class="text-xl font-bold mb-4 flex items-center text-secondary">
-                    <i class="fas fa-database mr-2"></i> Databases
-                </h3>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">MySQL</span>
-                            <span class="text-gray-400">70%</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">JDBC</span>
-                            <span class="text-gray-400">70%</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 70%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Web Development -->
-            <div data-aos="fade-right">
-                <h3 class="text-xl font-bold mb-4 flex items-center text-secondary">
-                    <i class="fas fa-globe mr-2"></i> Web Development
-                </h3>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">HTML</span>
-                            <span class="text-gray-400">90%</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">CSS</span>
-                            <span class="text-gray-400">85%</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">JavaScript</span>
-                            <span class="text-gray-400">50%</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 50%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Frameworks -->
-            <div data-aos="fade-left">
-                <h3 class="text-xl font-bold mb-4 flex items-center text-secondary">
-                    <i class="fas fa-cogs mr-2"></i> Frameworks
-                </h3>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Spring Boot</span>
-                            <span class="text-gray-400">80%</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Hibernate</span>
-                            <span class="text-gray-400">50%</span>
-                        </div>
-                        <div class="w-full bg-gray-800 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 50%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-dark/50">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
-                <span class="gradient-text">My Projects</span>
-            </h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Project 1 -->
-            <div data-aos="fade-up" data-aos-delay="100">
-                <div class="glass-card rounded-xl overflow-hidden border border-gray-800 hover:border-primary/50 transition">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-primary/20 p-3 rounded-lg mr-4">
-                                <i class="fas fa-address-book text-primary text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">Smart Contact Manager</h3>
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            A web-based contact management application that allows users to securely store,
-                            manage, and organize their contacts.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">Spring Boot</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">JavaScript</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">Html</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">MySQL</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">tailwindcss</span>
-                        </div>
-                        <a href="https://github.com/ranajagesh/Smart-Contact-Manager" target="_blank" class="inline-flex items-center text-primary hover:text-secondary transition">
-                            View Project <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Project 2 -->
-            <!-- <div data-aos="fade-up" data-aos-delay="200">
-                <div class="glass-card rounded-xl overflow-hidden border border-gray-800 hover:border-primary/50 transition">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-primary/20 p-3 rounded-lg mr-4">
-                                <i class="fas fa-shopping-cart text-primary text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">E-Commerce Shopping Website</h3>
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            A complete e-commerce platform with product listings, shopping cart, and user authentication.
-                            Built with Java, JSP, and MySQL.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">Java</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">JSP</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">MySQL</span>
-                        </div>
-                        <a href="https://github.com/pratikshahake26/Online_Ecommerce_Shopping_Website" target="_blank" class="inline-flex items-center text-primary hover:text-secondary transition">
-                            View Project <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div> -->
-            
-            <!-- Project 3 -->
-            <div data-aos="fade-up" data-aos-delay="300">
-                <div class="glass-card rounded-xl overflow-hidden border border-gray-800 hover:border-primary/50 transition">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-primary/20 p-3 rounded-lg mr-4">
-                                <i class="fas fa-hotel text-primary text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">Hotel Management System</h3>
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            Hotel Management System designed to manage basic hotel operations such as booking rooms, 
-                            managing customer details, and tracking services.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">Java</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">Swing</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">MySQL</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">Multithreading</span>
-                        </div>
-                        <a href="https://github.com/ranajagesh/Hotel-Management-System" target="_blank" class="inline-flex items-center text-primary hover:text-secondary transition">
-                            View Project <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Project 4 -->
-            <div data-aos="fade-up" data-aos-delay="400">
-                <div class="glass-card rounded-xl overflow-hidden border border-gray-800 hover:border-primary/50 transition">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-primary/20 p-3 rounded-lg mr-4">
-                                <i class="fas fa-university text-primary text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">Banking Management System</h3>
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            A simple Java-based console banking application that allows users to perform basic banking 
-                            operations like creating an account, depositing and withdrawing money, and checking balance.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">Java</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">MySql</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">Swing</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">AWT</span>
-                        </div>
-                        <a href="https://github.com/ranajagesh/Banking_Application" target="_blank" class="inline-flex items-center text-primary hover:text-secondary transition">
-                            View Project <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
+                    <div class="profile-ring-deco"></div>
                 </div>
             </div>
 
-            <!-- Project 5 -->
-            <div data-aos="fade-up" data-aos-delay="500">
-                <div class="glass-card rounded-xl overflow-hidden border border-gray-800 hover:border-primary/50 transition">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-primary/20 p-3 rounded-lg mr-4">
-                                <i class="fas fa-university text-primary text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">Portfolio</h3>
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            The portfolio website which gives the details
-                            information about me and my work build using html ,TailwindCss , JavaScript
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">Html</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">TailwindCss</span>
-                            <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">JavaScript</span>
-                        </div>
-                        <a href="https://github.com/ranajagesh/Jageshwar-Portfolio" target="_blank" class="inline-flex items-center text-primary hover:text-secondary transition">
-                            View Project <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-<section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-    <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
-            <span class="gradient-text">Get In Touch</span>
-        </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
     </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Contact Info -->
-        <div data-aos="fade-right">
-            <div class="glass-card p-8 rounded-xl border border-gray-800">
-                <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-                
-                <div class="space-y-6">
-                    <div class="flex items-start">
-                        <div class="bg-primary/20 p-3 rounded-lg mr-4">
-                            <i class="fas fa-map-marker-alt text-primary"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">Location</h4>
-                            <p class="text-gray-300">Pachamba, Suriya, Giridih, Jharkhand</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <div class="bg-primary/20 p-3 rounded-lg mr-4">
-                            <i class="fas fa-envelope text-primary"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">Email</h4>
-                            <a href="mailto:jageshwarrana25@gmail.com" class="text-gray-300 hover:text-secondary transition">jageshwarrana25@gmail.com</a>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <div class="bg-primary/20 p-3 rounded-lg mr-4">
-                            <i class="fas fa-phone-alt text-primary"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">Phone</h4>
-                            <a href="tel:+919031602729" class="text-gray-300 hover:text-secondary transition">+91 9031602729</a>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <div class="bg-primary/20 p-3 rounded-lg mr-4">
-                            <i class="fab fa-github text-primary"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">GitHub</h4>
-                            <a href="https://github.com/ranajagesh" target="_blank" class="text-gray-300 hover:text-secondary transition">github.com/ranajagesh</a>
-                        </div>
-                    </div>
+</section>
+
+<style>
+@media (min-width:768px) {
+    .hero-grid { grid-template-columns: 1fr 1fr !important; }
+}
+</style>
+
+
+<!-- ========== ABOUT ========== -->
+<section id="about" class="section">
+    <div class="section-title" data-aos="fade-up">
+        <h2 class="gradient-text">About Me</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr;gap:3rem;align-items:center" class="about-grid">
+
+        <!-- Photo -->
+        <div data-aos="fade-right" style="display:flex;justify-content:center">
+            <div class="about-photo">
+                <div class="about-img-box">
+                    <img src="./img/jaggu.jpg" alt="Jageshwar Rana">
                 </div>
-                
-                <div class="mt-8">
-                    <h4 class="font-bold text-lg mb-4">Connect with me</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/jageshwar-rana-474ba5228/" target="_blank" class="bg-primary/20 text-primary hover:bg-primary hover:text-white p-3 rounded-full transition">
-                            <i class="fab fa-linkedin-in"></i>
-                        linkedin</a>
-                        <a href="https://x.com/JageshwarR10760" target="_blank" class="bg-primary/20 text-primary hover:bg-primary hover:text-white p-3 rounded-full transition">
-                            <i class="fab fa-twitter"></i>
-                        X</a>
-                        <a href="https://www.instagram.com/rana_jagesh25/" target="_blank" class="bg-primary/20 text-primary hover:bg-primary hover:text-white p-3 rounded-full transition">
-                            <i class="fab fa-instagram"></i>
-                        instagram</a>
-                    </div>
+                <div class="about-stat" style="bottom:-1rem;right:-1rem">
+                    <div class="stat-val gradient-text">8.56</div>
+                    <div class="stat-label">MCA CGPA</div>
+                </div>
+                <div class="about-stat" style="top:-1rem;left:-1rem">
+                    <div class="stat-val" style="color:#67E8F9">3+</div>
+                    <div class="stat-label">Projects</div>
                 </div>
             </div>
         </div>
-        
-        <!-- Contact Form -->
+
+        <!-- Info -->
         <div data-aos="fade-left">
-            <div class="glass-card p-8 rounded-xl border border-gray-800">
-                <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
-                <form action="https://formsubmit.co/jageshwarrana25@gmail.com" method="POST" class="space-y-4">
-                    <input type="hidden" name="_subject" value="New message from portfolio!">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://yourportfolio.com/thank-you.html">
-                    
-                    <div>
-                        <label for="name" class="block text-sm font-medium mb-1">Name</label>
-                        <input type="text" id="name" name="name" required 
-                               class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+            <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:1rem">Let Me Introduce Myself</h3>
+            <p style="color:#94A3B8;line-height:1.75;margin-bottom:1rem;font-size:0.95rem">
+                I'm an MCA graduate from Marwari College, Ranchi, with a solid foundation in Java and backend development.
+                I specialise in building full-stack web applications using Spring Boot, Hibernate, and MySQL, and I'm passionate
+                about writing clean, maintainable code.
+            </p>
+            <p style="color:#94A3B8;line-height:1.75;margin-bottom:1.75rem;font-size:0.95rem">
+                I'm continuously learning and currently seeking backend or full-stack developer roles where I can
+                contribute, grow, and make a real impact.
+            </p>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem">
+                <div class="about-info-row">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Giridih, Jharkhand</span>
+                </div>
+                <div class="about-info-row">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:jageshwarrana25@gmail.com" style="color:inherit">jageshwarrana25@gmail.com</a>
+                </div>
+                <div class="about-info-row">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/ranajagesh" target="_blank" style="color:inherit">github.com/ranajagesh</a>
+                </div>
+                <div class="about-info-row">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/jageshwar-rana-474ba5228/" target="_blank" style="color:inherit">LinkedIn Profile</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+@media (min-width:768px) {
+    .about-grid { grid-template-columns: 2fr 3fr !important; }
+}
+</style>
+
+
+<!-- ========== EDUCATION ========== -->
+<section id="education" class="section-alt" style="padding:5rem 0">
+    <div class="section" style="padding-top:0;padding-bottom:0">
+        <div class="section-title" data-aos="fade-up">
+            <h2 class="gradient-text">Education</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;max-width:42rem;margin:0 auto" class="edu-grid">
+
+            <!-- MCA -->
+            <div class="edu-card" data-aos="fade-up" data-aos-delay="100">
+                <div style="display:flex;align-items:flex-start;gap:1rem">
+                    <div class="edu-icon" style="background:rgba(124,58,237,0.15);color:#A78BFA">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div>
-                        <label for="email" class="block text-sm font-medium mb-1">Email</label>
-                        <input type="email" id="email" name="email" required 
-                               class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <div class="edu-year">2021 – 2023</div>
+                        <div class="edu-degree">Master of Computer Application</div>
+                        <div class="edu-uni">Ranchi University · Marwari College</div>
+                        <span class="tag-chip">CGPA: 8.87</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BCA -->
+            <div class="edu-card" data-aos="fade-up" data-aos-delay="200">
+                <div style="display:flex;align-items:flex-start;gap:1rem">
+                    <div class="edu-icon" style="background:rgba(6,182,212,0.12);color:#67E8F9">
+                        <i class="fas fa-university"></i>
                     </div>
                     <div>
-                        <label for="subject" class="block text-sm font-medium mb-1">Subject</label>
-                        <input type="text" id="subject" name="subject" required 
-                               class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <div class="edu-year">2018 – 2021</div>
+                        <div class="edu-degree">B.Sc. in Computer Application</div>
+                        <div class="edu-uni">Ranchi University</div>
+                        <span class="tag-chip">CGPA: 8.54</span>
                     </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium mb-1">Message</label>
-                        <textarea id="message" name="message" rows="5" required 
-                                  class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+@media (min-width:640px) {
+    .edu-grid { grid-template-columns: 1fr 1fr !important; }
+}
+</style>
+
+
+<!-- ========== SKILLS ========== -->
+<section id="skills" class="section">
+    <div class="section-title" data-aos="fade-up">
+        <h2 class="gradient-text">Skills</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.5rem">
+
+        <!-- Languages -->
+        <div data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-group-title"><i class="fas fa-code"></i> Languages</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
+                <span class="skill-badge">Java</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">JavaScript</span>
+            </div>
+        </div>
+
+        <!-- Backend & Frameworks -->
+        <div data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-group-title"><i class="fas fa-layer-group"></i> Backend &amp; Frameworks</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
+                <span class="skill-badge">Spring Boot</span>
+                <span class="skill-badge">Spring MVC</span>
+                <span class="skill-badge">Spring Security</span>
+                <span class="skill-badge">Hibernate</span>
+                <span class="skill-badge">JPA</span>
+                <span class="skill-badge">Servlet</span>
+                <span class="skill-badge">JSP</span>
+            </div>
+        </div>
+
+        <!-- Frontend -->
+        <div data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-group-title"><i class="fas fa-paint-brush accent"></i> Frontend</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
+                <span class="skill-badge accent">HTML5</span>
+                <span class="skill-badge accent">CSS3</span>
+                <span class="skill-badge accent">TailwindCSS</span>
+            </div>
+        </div>
+
+        <!-- Databases -->
+        <div data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-group-title"><i class="fas fa-database accent"></i> Databases</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
+                <span class="skill-badge accent">MySQL</span>
+                <span class="skill-badge accent">JDBC</span>
+            </div>
+        </div>
+
+        <!-- Tools -->
+        <div data-aos="fade-up" data-aos-delay="500">
+            <div class="skill-group-title"><i class="fas fa-tools"></i> Tools</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
+                <span class="skill-badge">Git</span>
+                <span class="skill-badge">GitHub</span>
+                <span class="skill-badge">Postman</span>
+                <span class="skill-badge">MS Office</span>
+            </div>
+        </div>
+
+        <!-- Concepts -->
+        <div data-aos="fade-up" data-aos-delay="600">
+            <div class="skill-group-title"><i class="fas fa-brain accent"></i> Concepts</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem">
+                <span class="skill-badge accent">RESTful APIs</span>
+                <span class="skill-badge accent">OOP</span>
+                <span class="skill-badge accent">MVC Architecture</span>
+                <span class="skill-badge accent">CRUD</span>
+                <span class="skill-badge accent">RBAC</span>
+                <span class="skill-badge accent">Auth &amp; Authorization</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ========== PROJECTS ========== -->
+<section id="projects" class="section-alt" style="padding:5rem 0">
+    <div class="section" style="padding-top:0;padding-bottom:0">
+        <div class="section-title" data-aos="fade-up">
+            <h2 class="gradient-text">Projects</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem">
+
+            <!-- Smart Contact Manager -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div style="padding:1.5rem;display:flex;flex-direction:column;height:100%">
+                    <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem">
+                        <div class="project-icon" style="background:rgba(124,58,237,0.15);color:#A78BFA">
+                            <i class="fas fa-address-book"></i>
+                        </div>
+                        <span class="project-title">Smart Contact Manager</span>
                     </div>
-                    <button type="submit" 
-                            class="bg-primary hover:bg-purple-800 text-white font-medium py-3 px-6 rounded-lg transition shadow-lg hover:shadow-purple-500/20 w-full">
-                        Send Message
-                    </button>
-                </form>
+                    <div style="font-size:0.72rem;color:#475569;margin-bottom:0.875rem;font-weight:500">Jan 2026 – May 2026</div>
+                    <p style="color:#94A3B8;font-size:0.85rem;line-height:1.7;margin-bottom:1rem;flex:1">
+                        Full-stack contact management web app with multi-account support, 10+ RESTful API endpoints,
+                        Spring Security RBAC, session-based authentication, and optimised JPA queries on MySQL via Hibernate ORM.
+                    </p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.375rem;margin-bottom:1.25rem">
+                        <span class="tag-chip">Spring Boot</span>
+                        <span class="tag-chip">Spring Security</span>
+                        <span class="tag-chip">Hibernate / JPA</span>
+                        <span class="tag-chip">MySQL</span>
+                        <span class="tag-chip">TailwindCSS</span>
+                        <span class="tag-chip">JavaScript</span>
+                    </div>
+                    <a href="https://github.com/ranajagesh/Smart-Contact-Manager" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right" style="font-size:0.7rem"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Food Service Platform -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div style="padding:1.5rem;display:flex;flex-direction:column;height:100%">
+                    <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem">
+                        <div class="project-icon" style="background:rgba(6,182,212,0.1);color:#67E8F9">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <span class="project-title">Food Service Platform</span>
+                    </div>
+                    <div style="font-size:0.72rem;color:#475569;margin-bottom:0.875rem;font-weight:500">Nov 2025 – Jan 2026</div>
+                    <p style="color:#94A3B8;font-size:0.85rem;line-height:1.7;margin-bottom:1rem;flex:1">
+                        Web-based food ordering platform with user registration, dynamic menu browsing, cart management,
+                        and end-to-end order processing. RESTful API backend with server-side validation and structured exception handling.
+                    </p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.375rem;margin-bottom:1.25rem">
+                        <span class="tag-chip">Spring Boot</span>
+                        <span class="tag-chip">MySQL</span>
+                        <span class="tag-chip">RESTful API</span>
+                        <span class="tag-chip">JavaScript</span>
+                    </div>
+                    <a href="https://github.com/ranajagesh" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right" style="font-size:0.7rem"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Banking System -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div style="padding:1.5rem;display:flex;flex-direction:column;height:100%">
+                    <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem">
+                        <div class="project-icon" style="background:rgba(124,58,237,0.15);color:#A78BFA">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <span class="project-title">Banking Management System</span>
+                    </div>
+                    <div style="font-size:0.72rem;color:#475569;margin-bottom:0.875rem;font-weight:500">Academic Project</div>
+                    <p style="color:#94A3B8;font-size:0.85rem;line-height:1.7;margin-bottom:1rem;flex:1">
+                        Java GUI application for account creation, deposits, withdrawals, and balance
+                        checks — demonstrating core OOP principles and JDBC database connectivity with MySQL.
+                    </p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.375rem;margin-bottom:1.25rem">
+                        <span class="tag-chip">Java</span>
+                        <span class="tag-chip">Swing / AWT</span>
+                        <span class="tag-chip">MySQL</span>
+                        <span class="tag-chip">JDBC</span>
+                    </div>
+                    <a href="https://github.com/ranajagesh/Banking_Application" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right" style="font-size:0.7rem"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ========== EXPERIENCE ========== -->
+<section id="experience" class="section">
+    <div class="section-title" data-aos="fade-up">
+        <h2 class="gradient-text">Experience</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div style="max-width:48rem;margin:0 auto">
+        <div class="edu-card" data-aos="fade-up" style="position:relative;padding-left:2rem;border-left:2px solid rgba(124,58,237,0.35)">
+            <!-- dot on timeline -->
+            <div style="position:absolute;left:-7px;top:1.5rem;width:12px;height:12px;border-radius:50%;background:var(--primary);border:2px solid var(--dark)"></div>
+
+            <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:0.5rem;margin-bottom:0.5rem">
+                <div>
+                    <div style="font-family:'Syne',sans-serif;font-weight:700;color:#fff;font-size:1rem">Computer Operator</div>
+                    <div style="color:#A78BFA;font-size:0.875rem;font-weight:500">P L Construction · Ranchi, India</div>
+                </div>
+                <span class="tag-chip" style="white-space:nowrap">Jun 2025 – Present</span>
+            </div>
+
+            <ul style="color:#94A3B8;font-size:0.85rem;line-height:1.75;list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.4rem">
+                <li style="display:flex;gap:0.5rem">
+                    <span style="color:#A78BFA;flex-shrink:0;margin-top:2px">▸</span>
+                    Processed and validated 200+ daily data entries across multiple systems with 100% accuracy and zero data-loss incidents.
+                </li>
+                <li style="display:flex;gap:0.5rem">
+                    <span style="color:#A78BFA;flex-shrink:0;margin-top:2px">▸</span>
+                    Automated monthly report generation using advanced MS Excel formulas and macros, cutting manual effort by ~30%.
+                </li>
+                <li style="display:flex;gap:0.5rem">
+                    <span style="color:#A78BFA;flex-shrink:0;margin-top:2px">▸</span>
+                    Organised a structured digital filing system for 500+ documents, improving retrieval speed and audit compliance.
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!-- ========== CERTIFICATIONS ========== -->
+<section class="section-alt" style="padding:4rem 0">
+    <div class="section" style="padding-top:0;padding-bottom:0">
+        <div class="section-title" data-aos="fade-up">
+            <h2 class="gradient-text">Certification</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div style="max-width:48rem;margin:0 auto">
+            <div class="edu-card" data-aos="fade-up" style="display:flex;align-items:flex-start;gap:1rem">
+                <div class="edu-icon" style="background:rgba(6,182,212,0.12);color:#67E8F9;flex-shrink:0">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div>
+                    <div style="font-family:'Syne',sans-serif;font-weight:700;color:#fff;font-size:1rem;margin-bottom:0.25rem">
+                        Full-Stack Java Development Course
+                    </div>
+                    <div style="color:#67E8F9;font-size:0.85rem;font-weight:500;margin-bottom:0.5rem">JSpider Marathahali</div>
+                    <p style="color:#94A3B8;font-size:0.85rem;line-height:1.65;margin:0">
+                        Delivered production-grade Java web applications using Spring Boot and MySQL under real-world
+                        project constraints and professional timelines.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-    <!-- Footer -->
-    <footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="text-center md:text-left mb-4 md:mb-0">
-                    <p class="text-gray-400">
-                        &copy; 2025 Jageshwar Rana. All rights reserved.
-                    </p>
+
+<!-- ========== CONTACT ========== -->
+<section id="contact" class="section">
+    <div class="section-title" data-aos="fade-up">
+        <h2 class="gradient-text">Get In Touch</h2>
+        <div class="section-line"></div>
+        <p style="color:#94A3B8;margin-top:1rem;font-size:0.9rem;max-width:28rem;margin-left:auto;margin-right:auto">
+            Have an opportunity or want to collaborate? I'd love to hear from you.
+        </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr;gap:2rem;max-width:56rem;margin:0 auto" class="contact-grid">
+
+        <!-- Info card -->
+        <div data-aos="fade-right">
+            <div class="glass-card" style="border-radius:1.25rem;padding:2rem;height:100%">
+                <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.2rem;margin-bottom:1.5rem">Contact Info</h3>
+
+                <div style="display:flex;flex-direction:column;gap:1.25rem;margin-bottom:2rem">
+                    <div class="contact-row">
+                        <a href="mailto:jageshwarrana25@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                        <div>
+                            <div class="contact-label">Email</div>
+                            <a href="mailto:jageshwarrana25@gmail.com" style="color:#CBD5E1;font-size:0.875rem;transition:color 0.2s" onmouseover="this.style.color='#A78BFA'" onmouseout="this.style.color='#CBD5E1'">
+                                jageshwarrana25@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <a href="tel:+919031602729" class="social-icon"><i class="fas fa-phone-alt"></i></a>
+                        <div>
+                            <div class="contact-label">Phone</div>
+                            <a href="tel:+919031602729" style="color:#CBD5E1;font-size:0.875rem;transition:color 0.2s" onmouseover="this.style.color='#A78BFA'" onmouseout="this.style.color='#CBD5E1'">
+                                +91 9031602729
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="social-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <div class="contact-label">Location</div>
+                            <span style="color:#CBD5E1;font-size:0.875rem">Giridih, Jharkhand · Open to relocation</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-secondary transition">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-secondary transition">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-secondary transition">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-secondary transition">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+
+                <div>
+                    <div style="font-size:0.65rem;color:#475569;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem">Find me on</div>
+                    <div style="display:flex;gap:0.625rem">
+                        <a href="https://www.linkedin.com/in/jageshwar-rana-474ba5228/" target="_blank" class="social-icon sm" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/ranajagesh" target="_blank" class="social-icon sm" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/JageshwarR10760" target="_blank" class="social-icon sm" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/rana_jagesh25/" target="_blank" class="social-icon sm" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#home" id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-purple-800">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+        <!-- Form card -->
+        <div data-aos="fade-left">
+            <div class="glass-card" style="border-radius:1.25rem;padding:2rem">
+                <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.2rem;margin-bottom:1.5rem">Send a Message</h3>
 
-    <!-- JavaScript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/main.js"></script>
+                <!--
+                    HOW THIS FORM WORKS:
+                    ─────────────────────────────────────────────────
+                    1. Uses FormSubmit.co AJAX endpoint (no backend needed).
+                    2. On first submission, FormSubmit will email you a
+                       one-time activation link — click it to confirm.
+                    3. After that, every submission lands in your inbox.
+                    4. The fetch() in main.js prevents page redirect and
+                       shows success/error messages inline.
+                    ─────────────────────────────────────────────────
+                -->
+                <form id="contact-form" style="display:flex;flex-direction:column;gap:1rem">
+                    <!-- FormSubmit hidden config fields -->
+                    <input type="hidden" name="_subject"  value="New message from your portfolio!">
+                    <input type="hidden" name="_captcha"  value="false">
+                    <input type="hidden" name="_template" value="table">
+
+                    <div>
+                        <label class="form-label" for="name">Your Name</label>
+                        <input id="name" type="text" name="name" required placeholder="Ramesh Kumar" class="form-input">
+                    </div>
+                    <div>
+                        <label class="form-label" for="email">Email</label>
+                        <input id="email" type="email" name="email" required placeholder="ramesh@company.com" class="form-input">
+                    </div>
+                    <div>
+                        <label class="form-label" for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="I'd like to discuss an opportunity…" class="form-input"></textarea>
+                    </div>
+
+                    <button type="submit" id="form-submit-btn" class="btn-primary" style="justify-content:center">
+                        <i class="fas fa-paper-plane" style="font-size:0.8rem"></i>
+                        Send Message
+                    </button>
+
+                    <!-- Inline feedback messages -->
+                    <div id="form-success" class="form-msg success">
+                        <i class="fas fa-check-circle" style="margin-right:6px"></i>
+                        Message sent! I'll get back to you soon.
+                    </div>
+                    <div id="form-error" class="form-msg error">
+                        <i class="fas fa-exclamation-circle" style="margin-right:6px"></i>
+                        Something went wrong. Please email me directly.
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+@media (min-width:768px) {
+    .contact-grid { grid-template-columns: 1fr 1fr !important; }
+}
+</style>
+
+
+<!-- ========== FOOTER ========== -->
+<footer>
+    <div class="footer-inner">
+        <p style="color:#475569;font-size:0.875rem">© 2025 Jageshwar Rana · Built with passion ☕</p>
+        <div style="display:flex;gap:0.625rem">
+            <a href="https://www.linkedin.com/in/jageshwar-rana-474ba5228/" target="_blank" class="social-icon sm"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/ranajagesh" target="_blank" class="social-icon sm"><i class="fab fa-github"></i></a>
+            <a href="https://x.com/JageshwarR10760" target="_blank" class="social-icon sm"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/rana_jagesh25/" target="_blank" class="social-icon sm"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./js/main.js"></script>
+
 </body>
-
 </html>
